@@ -1,0 +1,38 @@
+:root {
+    --header-color: rgb(51, 161, 224);
+    --main-color: rgb(255, 249, 175);
+    --deep-color: rgb(28, 110, 164);
+
+    --header-height: 10vh; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Start */
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+
+    background-color: var(--header-color);
+    border-bottom: 3px solid gray;
+
+    width: 100vw;
+    height: var(--header-height);
+}
+/* Header End */
+
+
+/* Main Start */
+main {
+    background-color: var(--main-color);
+    height: 500vh;
+    margin-top: var(--header-height);
+}
+/* Main End */
+
+/* Footer Start */
+/* Footer End*/
