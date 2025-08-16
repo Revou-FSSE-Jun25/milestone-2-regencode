@@ -1,0 +1,41 @@
+:root {
+    --header-color: rgb(51, 161, 224);
+    --main-color: rgb(255, 249, 175);
+    --deep-color: rgb(28, 110, 164);
+    --orange-color: rgb(255, 225, 0);
+    --deep-orange-color: rgb(255, 155, 0);
+
+    --header-height: 10vh; 
+}
+
+/* Class define */
+.text-white {
+    color: white;
+}
+
+.text-orange {
+    color: var(--orange-color);
+}
+
+.kablammo-font {
+  font-family: "Kablammo", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 0;
+}
+
+.oi-regular {
+  font-family: "Oi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.delius-regular {
+  font-family: "Delius", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+/* Class define end */
+

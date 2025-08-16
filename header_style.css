@@ -1,0 +1,31 @@
+/* Header Start */
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: var(--header-color);
+
+    width: 94vw;
+    padding: 0vh 3vw;
+    height: var(--header-height);
+
+    overflow-y: visible;
+}
+
+#header-title h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+#name-input p {
+    margin: 0;
+}
+#name-input input {
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+}
