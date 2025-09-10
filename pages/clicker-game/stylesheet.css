@@ -1,0 +1,52 @@
+@import "/vars.css";
+@import "/classes.css";
+@import "/header_style.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Delius", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Main Start */
+main {
+    background-color: var(--main-color);
+    height: 500vh;
+    margin-top: var(--header-height);
+}
+
+#game {
+    display: flex;
+    
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+}
+
+.game-button {
+    display: flex;
+    aspect-ratio: 1/1;
+    width: 15vw;
+
+    background-color: red;
+    color: white;
+    border: 2px solid black;
+    border-radius: 1000px;
+
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+    -webkit-user-select: none; /* Safari, Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    transition: any 0.05s;
+}
+
+#clicker-button {
+    display: none;
+}
+/* Main End */
