@@ -7,6 +7,11 @@
     <meta name="description" content="" />
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="stylesheet.css">
+    <!--- Fonts --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Kablammo&family=Oi&display=swap" rel="stylesheet">
+    <!--- /Fonts --->
 </head>
 <body>
     <header>
@@ -20,7 +25,15 @@
         </div>
     </header>
     <main>
-        <p>hello world!</p>
+        <section id="game">
+            <p>Score: <span id="score">0</span></p>
+            <p>You chose: <span id="player-choice">________</span> </p>
+            <p>Computer chose: <span id="computer-choice">________</span> </p>
+            <p id="result"></p>
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </section>
     </main>
     <footer>
     </footer>

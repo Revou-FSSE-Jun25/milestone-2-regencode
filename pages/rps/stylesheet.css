@@ -1,0 +1,29 @@
+@import "/vars.css";
+@import "/classes.css";
+@import "/header_style.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Delius", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Main Start */
+main {
+    background-color: var(--main-color);
+    height: 500vh;
+    margin-top: var(--header-height);
+}
+
+#game {
+    display: flex;
+    
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    
+}
+/* Main End */
