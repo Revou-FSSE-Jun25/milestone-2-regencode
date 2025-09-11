@@ -15,35 +15,57 @@ const getRandomNumber = (low, high) => {
 
 const rps_game = (user_current_move) => {
     let computer_current_move = getRandomNumber(0, 2);
-    let playerWin = "draw";
+    let playerWin = "draw"; // "draw" if draw, else True/False if win/lose
     playerChoice.innerHTML = i_to_s[user_current_move];
     computerChoice.innerHTML = i_to_s[computer_current_move];
+    
 
-    if(user_current_move == computer_current_move) {
-        resultBoard.innerText = "Draw!";
+    switch (i_to_s[user_current_move]) {
+        case "rock":
+            switch(i_to_s[computer_current_move]) {
+                case "rock":
+                    playerWin = "draw";
+                    break
+                case "paper":
+                    playerWin = False;
+                    break
+                case "scissors":
+                    playerWin = True;
+                    break
+            }
+            break
+        case "paper":
+            switch(i_to_s[computer_current_move]) {
+                case "rock":
+                    playerWin = True;
+                    break
+                case "paper":
+                    playerWin = "draw";
+                    break
+                case "scissors":
+                    playerWin = False;
+                    break
+            }
+            break
+        case "scissors":
+            switch(i_to_s[computer_current_move]) {
+                case "rock":
+                    playerWin = False;
+                    break
+                case "paper":
+                    playerWin = True;
+                    break
+                case "scissors":
+                    playerWin = "draw";
+                    break
+            }
+            break
     }
-    else {
-        // convert to switch case
-        if(user_current_move == 2){
-            if(computer_current_move == 0) {
-                playerWin = false;
-            }
-            else playerWin = true;
+        
+        if(playerWin === "draw") {
+            resultBoard.innerText = "Draw!";
         }
-        else if(computer_current_move == 2) {
-            if(user_current_move == 0) {
-                playerWin = true;
-            }
-            else playerWin = false;
-        }
-        else {
-            if(user_current_move > computer_current_move) {
-                playerWin = true;
-            }
-            else playerWin = false;
-        }
-
-        if(playerWin) {
+        else if(playerWin === True) {
             resultBoard.innerText = "You Win! :)))";
             scoreBoard.innerText = parseInt(scoreBoard.innerText) + 1;
         }
