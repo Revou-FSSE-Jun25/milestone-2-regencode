@@ -8,6 +8,11 @@ const getRandomNumber = (low, high) => {
 }
 
 const submitGuess = (userInput, trueValue) => {
+    // handle & validate input
+    if(typeof userInput != "number") {
+        guessResult.innerHTML = "Input is invalid! (must be number)";
+        return 0;
+    }
     if (userInput == trueValue) {
         guessResult.innerHTML = "Guess is correct!";
         return 0;

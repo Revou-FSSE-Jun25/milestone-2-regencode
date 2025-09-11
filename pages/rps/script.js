@@ -23,6 +23,7 @@ const rps_game = (user_current_move) => {
         resultBoard.innerText = "Draw!";
     }
     else {
+        // convert to switch case
         if(user_current_move == 2){
             if(computer_current_move == 0) {
                 playerWin = false;
