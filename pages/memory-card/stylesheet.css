@@ -19,11 +19,12 @@ main {
 
 #game {
     display: flex;
+
     
     margin: auto;
     align-items: center;
     flex-direction: column;
-    width: 300px;
+    width: 90%;
 }
 
 .game-button {
@@ -51,16 +52,89 @@ main {
 }
 
 #card-grid {
-    display: grid;
+    display: none;
+    width: 75vmin;
+    aspect-ratio: 1/1;
+
+    gap: 5px;
+
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .card {
+    /* .card is a 3d container
+        for card-face, card-front and card-back */
     display: flex;
     width: 100%;
+    aspect-ratio: 1/1;
+    perspective: 1000px;
 
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 15px;
+
+    font-size: 10vmin;
+    cursor: pointer;
+
+    transition: transform 0.6s;
     
+    transform-style: preserve-3d;
+    user-select: none;
+    z-index: 1;
 }
+
+.card-face {
+    /* hide backface to hide mirroring */
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* if .card elem has .flipped */
+.card.flipped {
+    /* transition is triggered when attribute value changes */
+    transform: rotateY(180deg);
+}
+
+@keyframes correct {
+    0% { background-color: white; }
+    50% { background-color: green; }
+    100% { background-color: white; }
+}
+@keyframes wrong {
+    0% { background-color: white; }
+    50% { background-color: red; }
+    100% { background-color: white; }
+}
+@keyframes shake {
+  0%   { transform: rotateY(0deg) translateX(0); }
+  20%  { transform: rotateY(0deg) translateX(-5px); }
+  40%  { transform: rotateY(0deg) translateX(5px); }
+  60%  { transform: rotateY(0deg) translateX(-5px); }
+  80%  { transform: rotateY(0deg) translateX(5px); }
+  100% { transform: rotateY(0deg) translateX(0); }
+}
+
+.card.correct {
+    animation: correct 0.5s forwards;
+}
+
+.card.wrong {
+    animation: wrong 0.5s forwards, shake 0.2s ease-in-out;
+}
+
 /* Main End */
 
 

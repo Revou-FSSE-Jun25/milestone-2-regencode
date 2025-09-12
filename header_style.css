@@ -12,6 +12,7 @@ header {
     width: 94vw;
     padding: 0vh 3vw;
     height: var(--header-height);
+    z-index: 1000;
 }
 
 #header-title h1 {
