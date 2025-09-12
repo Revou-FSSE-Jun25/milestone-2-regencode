@@ -26,4 +26,23 @@ main {
     width: 300px;
     
 }
+
+.menu-button {
+    display: block;
+    margin: 5vh auto;
+    width: 10vw;
+    aspect-ratio: 6/2;
+    border: 2px solid black;
+    border-radius: 10px;
+
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color: var(--deep-color);
+    color: white;
+}
 /* Main End */
