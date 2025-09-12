@@ -9,11 +9,7 @@ const getRandomNumber = (low, high) => {
 
 const submitGuess = (userInput, trueValue) => {
     // handle & validate input
-    if(typeof userInput != "number") {
-        guessResult.innerHTML = "Input is invalid! (must be number)";
-        return 0;
-    }
-    if (userInput == trueValue) {
+    if (userInput === trueValue) {
         guessResult.innerHTML = "Guess is correct!";
         return 0;
     }
@@ -21,12 +17,8 @@ const submitGuess = (userInput, trueValue) => {
         guessResult.innerHTML = "Too High!";
         return 1;
     }
-    else if(userInput < trueValue) {
-        guessResult.innerHTML = "Too Low!";
-        return 1;
-    }
     else {
-        guessResult.innerHTML = "Invalid";
+        guessResult.innerHTML = "Too Low!";
         return 1;
     }
 }
@@ -34,7 +26,15 @@ const submitGuess = (userInput, trueValue) => {
 let randomNumber = getRandomNumber(0, 100);
 numTries.innerHTML = 5 // 5 tries
 guessButton.onclick = () => {
-    let userInput = inputField.value;
+    let userInput;
+    try {
+        userInput = parseInt(inputField.value);
+        if(isNaN(userInput)) throw TypeError; // invalid type (must be number);
+    } 
+    catch { // TypeError?
+        guessResult.innerHTML = "Input is invalid! (must be number)";
+        return;
+    }
     let result = submitGuess(userInput, randomNumber)
     let tries = parseInt(numTries.innerHTML) - result;
 
