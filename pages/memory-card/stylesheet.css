@@ -1,6 +1,6 @@
-@import "/vars.css";
-@import "/classes.css";
-@import "/header_style.css";
+@import "../../vars.css";
+@import "../../classes.css";
+@import "../../header_style.css";
 
 body {
     margin: 0;
