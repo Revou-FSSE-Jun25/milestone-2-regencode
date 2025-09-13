@@ -1,0 +1,85 @@
+@import "../../vars.css";
+@import "../../classes.css";
+@import "../../header_style.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Delius", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Main Start */
+main {
+    background-color: var(--main-color);
+    height: 500vh;
+    margin-top: var(--header-height);
+}
+
+#game {
+    display: flex;
+    
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.game-button {
+    display: flex;
+    aspect-ratio: 1/1;
+    width: 10vw;
+
+    background-color: red;
+    color: white;
+    border: 2px solid black;
+    border-radius: 1000px;
+
+    align-items: center;
+    justify-content: center;
+
+    user-select: none;
+    -webkit-user-select: none; /* Safari, Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    transition: any 0.05s;
+}
+
+#clicker-button {
+    display: none;
+}
+
+#game-grid{
+    display: grid;
+    width: 75vmin;
+    aspect-ratio: 1/1;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.game-block {
+    display: flex;
+    border: 1px solid black;
+}
+
+.menu-button {
+    display: block;
+    margin: 5vh auto;
+    width: 10vw;
+    aspect-ratio: 6/2;
+    border: 2px solid black;
+    border-radius: 10px;
+
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color: var(--deep-color);
+    color: white;
+}
+/* Main End */
+
+

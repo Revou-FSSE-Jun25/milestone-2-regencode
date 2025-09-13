@@ -25,54 +25,53 @@ const rps_game = (user_current_move) => {
             switch(i_to_s[computer_current_move]) {
                 case "rock":
                     playerWin = "draw";
-                    break
+                    break;
                 case "paper":
-                    playerWin = False;
-                    break
+                    playerWin = false;
+                    break;
                 case "scissors":
-                    playerWin = True;
-                    break
+                    playerWin = true;
+                    break;
             }
-            break
+            break;
         case "paper":
             switch(i_to_s[computer_current_move]) {
                 case "rock":
-                    playerWin = True;
-                    break
+                    playerWin = true;
+                    break;
                 case "paper":
                     playerWin = "draw";
-                    break
+                    break;
                 case "scissors":
-                    playerWin = False;
-                    break
+                    playerWin = false;
+                    break;
             }
-            break
+            break;
         case "scissors":
             switch(i_to_s[computer_current_move]) {
                 case "rock":
-                    playerWin = False;
-                    break
+                    playerWin = false;
+                    break;
                 case "paper":
-                    playerWin = True;
-                    break
+                    playerWin = true;
+                    break;
                 case "scissors":
                     playerWin = "draw";
-                    break
+                    break;
             }
-            break
+            break;
     }
         
-        if(playerWin === "draw") {
-            resultBoard.innerText = "Draw!";
-        }
-        else if(playerWin === True) {
-            resultBoard.innerText = "You Win! :)))";
-            scoreBoard.innerText = parseInt(scoreBoard.innerText) + 1;
-        }
-        else {
-            resultBoard.innerText = "You Lose! :(";
-            scoreBoard.innerText = parseInt(scoreBoard.innerText) - 1;
-        }
+    if(playerWin === "draw") {
+        resultBoard.innerText = "Draw!";
+    }
+    else if(playerWin === true) {
+        resultBoard.innerText = "You Win! :)))";
+        scoreBoard.innerText = parseInt(scoreBoard.innerText) + 1;
+    }
+    else {
+        resultBoard.innerText = "You Lose! :(";
+        scoreBoard.innerText = parseInt(scoreBoard.innerText) - 1;
     }
 }
 
