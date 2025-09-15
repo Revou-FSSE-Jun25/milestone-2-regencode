@@ -51,22 +51,28 @@ main {
 }
 
 #game-grid{
-    display: grid;
+    display: none;
     width: 75vmin;
     aspect-ratio: 1/1;
+    border: 1px solid black;
 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 .game-block {
     display: flex;
-    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-button {
     display: block;
     margin: 5vh auto;
     width: 10vw;
-    aspect-ratio: 6/2;
+    aspect-ratio: 3/1;
     border: 2px solid black;
     border-radius: 10px;
 
