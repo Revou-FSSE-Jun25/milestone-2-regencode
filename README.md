@@ -27,10 +27,9 @@ The application provides a central navigation menu that lists available games. S
   - Flip cards to find matching pairs.  
   - Objective is to clear the board with the fewest moves possible.  
 
-### In Progress / Coming Soon  
 - **Avoid the Falling Objects**  
-  - Concept game where the player must dodge falling objects.  
-  - Placeholder present in menu, implementation pending.  
+  - The player must dodge falling objects, using WASD to move.  
+  - Objective is to live as long as possible.
 
 ### General Features  
 - Simple and intuitive navigation between games.  
